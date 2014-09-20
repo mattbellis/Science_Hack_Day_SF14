@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+// This example creates circles on the map, representing
+// the LHC.
+
+// First, create an object containing LatLng and population for each city.
+var citymap = {};
+citymap['sf'] = {
+  center: new google.maps.LatLng(37.7749295,-122.4194155),
+};
+
+var cityCircle;
+
+function initialize() {
+  // Create the map.
+  var mapOptions = {
+    zoom: 12,
+    //center: new google.maps.LatLng(37.09024, -95.712891),
+    center: citymap['sf'].center,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  // Construct the circle for each value in citymap.
+  for (var city in citymap) {
+    var ring_size = {
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 5,
+      fillColor: '#FF0000',
+      //fillOpacity: 0.35,
+      fillOpacity: 0.1,
+      map: map,
+      center: citymap[city].center,
+      radius: 4300.0 // in meters
+    };
+    // Add the circle for this city to the map.
+    cityCircle = new google.maps.Circle(ring_size);
+
+	var ring_size = {
+      	strokeColor: '#0000FF',
+      	strokeOpacity: 0.8,
+      	strokeWeight: 5,
+      	fillColor: '#0000FF',
+      	//fillOpacity: 0.35,
+      	fillOpacity: 0.0,
+      	map: map,
+      	center: citymap[city].center,
+      	radius: 4400.0 // in meters
+    };
+    // Add the circle for this city to the map.
+    cityCircle = new google.maps.Circle(ring_size);
+
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
