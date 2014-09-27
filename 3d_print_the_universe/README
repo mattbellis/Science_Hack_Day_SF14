@@ -1,0 +1,39 @@
+################################################################################
+# README
+################################################################################
+
+Project to take 3D models of the universe (galaxies or dark matter concentrations)
+and turn them into a file for 3D printing.
+
+
+I am unfamiliar with some of the formats of these computer simulations, so maybe
+it's easier than I think. Or harder? I'm not terribly familar with 3D printing, 
+either. I do know that we eventually want a file in the STL format for the
+3D printer.
+
+http://en.wikipedia.org/wiki/STL_(file_format)
+
+I've mucked around with openscad a bit, which is a free program and allows you 
+to build your 3D model with a fairly straighforward language of polygons, 
+translations, and rotations. This program can dump output to STL trivially.
+
+http://www.openscad.org/
+
+http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/First_Steps
+
+http://en.wikibooks.org/wiki/OpenSCAD_User_Manual
+
+http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language
+
+I've included a very simple openscad example file in this repo. 
+
+    openscad_example_000.scad
+
+One idea I had was to write a program to take the universe simulations
+and determine regions of density and represent them as spheres in openscad.
+We'd then have to connect them together with the dark matter ``filaments" so 
+the whole thing could be 3D printed. 
+
+It's a pretty crude idea, so don't let this stop you coming up with a much 
+better one!
+
