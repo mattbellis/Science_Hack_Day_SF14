@@ -43,7 +43,8 @@ void draw() {
   
     // Draw an ellipse.
     float scale = (t%60)*circle_radius*(1./60);
-    fill(255,(t%60)*255*(1./60));
+    fill(255,(t%60)*50*(1./60)+50);
+    stroke(255,(t%60)*50*(1./60)+50);
     ellipse(x,y,scale,scale);
 
 
