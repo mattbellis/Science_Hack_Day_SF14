@@ -1,0 +1,61 @@
+################################################################################
+# README
+################################################################################
+
+Project to create a website where users can enter in their location and see
+how big the Large Hadron Collider is, by overlaying a circle of the same size
+on a map. 
+
+There are two starter files here:
+
+* lhc_in_sf.html
+  This is just a web page that makes use of Google Map's API to display 
+  San Francisco and overlay two circles the size of the LHC (17 miles in
+  circumference!).
+
+* google_maps_api_hello_world.py
+  A python script that shows how one could use Google Geocoding to get the latitude
+  and longitude of a location from the city/state information.
+
+
+Useful links might be
+
+https://developers.google.com/maps/documentation/javascript/examples/circle-simple
+
+https://developers.google.com/maps/documentation/javascript/reference#CircleOptions
+
+https://developers.google.com/maps/documentation/geocoding/
+
+
+Some of the particle physics accelerators that might be displayed are:
+
+* Large Hadron Collider (CERN, Geneva, Switzerland)
+  circular, radius = 4.3 km
+  Collides protons and protons.
+  Currently running.
+  http://en.wikipedia.org/wiki/Large_Hadron_Collider
+
+* Tevatron (Fermilab, Batavia, IL)
+  circular, radius = 1.0 km
+  Collided protons and anti-protons. 
+  1983-2011
+  http://en.wikipedia.org/wiki/Tevatron
+
+* SLAC (SLAC, Stanford, CA) 
+  linear, length = 3.2 km
+  Accelerated electrons and anti-electrons, as well as just electrons for some experiments. 
+  Particle physics (1966-2008), X-ray laser (2009-present)
+  http://en.wikipedia.org/wiki/SLAC_National_Accelerator_Laboratory#Accelerator
+
+* Very Large Hadron Collider/Future Circular Collider (proposed, CERN, Geneva, Switzerland).
+  circular, radius = 12.7 km
+  Would collide protons and protons.
+  FUTURE!
+  http://www.livescience.com/43274-future-colliders-dwarf-lhc-atom-smasher.html
+
+* International Linear Collider (ILC) (proposed, Japan)
+  linear, length = 80 km
+  Would collide electrons and anti-electrons.
+  FUTURE!
+  http://www.livescience.com/43274-future-colliders-dwarf-lhc-atom-smasher.html
+
