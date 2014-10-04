@@ -15,3 +15,7 @@ more in the future. I've used some of their helper code to put together a
 simplified IPython notebook that lets you ``see" how their detectors light up
 when a neutrino hits the ice. 
 
+http://nbviewer.ipython.org/github/mattbellis/Science_Hack_Day_SF14/blob/master/icecube_data/hello_icecube.ipynb
+
+I've included a small amount (10 neutrino collisions) in this Github repo, but
+if you want more, just let me know!
