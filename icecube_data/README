@@ -1,0 +1,17 @@
+################################################################################
+# README
+################################################################################
+
+Icecube is a particle physics experiment in Antarctica that looks for every high
+energy neutrinos coming from outside our solar system. To do this, they melt holes 
+in the ice and lower strings of very sensitive light detectors. When the neutrinos
+hit the ice, they produce showers of other particles which themselves produce light
+as they pass through the ice and it is this light that their detectros pick up. 
+
+Icecube has instrumented about 1 cubic kilometer of ice!
+
+They have released subsets of their data to the public and will be releasing even
+more in the future. I've used some of their helper code to put together a 
+simplified IPython notebook that lets you ``see" how their detectors light up
+when a neutrino hits the ice. 
+

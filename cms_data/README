@@ -1,0 +1,23 @@
+################################################################################
+# README
+################################################################################
+
+The CMS experiment is one of the two largest particle physics experiments at
+the Large Hadron Collider and it's my primary research project!
+
+http://cms.web.cern.ch/
+
+http://en.wikipedia.org/wiki/Compact_Muon_Solenoid
+
+We've released some of our data to the general public for research, 
+education, outreach, or just having fun! And more is coming later this year!
+
+I've worked on simplifying the data and the interface so that others can play with it. 
+I've included a simple IPython notebook in this repo that gets you started ``seeing" the
+data and learning how to interact with it. 
+
+http://nbviewer.ipython.org/github/mattbellis/Science_Hack_Day_SF14/blob/master/cms_data/hello_CMS.ipynb
+
+Let me know what you might want to do this data. Art? Science? Education? Let's work
+together on something cool!
+
