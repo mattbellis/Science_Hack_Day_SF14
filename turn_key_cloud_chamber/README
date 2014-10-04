@@ -1,0 +1,33 @@
+################################################################################
+# README
+################################################################################
+
+ 
+Last year  we adapted some online instructions we found and built a turn-key cloud chamber that we could use to see traces left by radioactive decays and even cosmic rays! Normally these devices use dry ice to cool the chamber, but our model used Peltier cooling devices, a computer cooling fan, and a scavenged computer power supply. It was *awesome*. 
+ 
+Over the last year, we've tweaked the design and we think we have the build down pretty good. So good in fact, that we think that we can show you how to build your own turn-key cloud chamber and then you can hack on the design the remainder of the weekend! I'm going to bring enough Peltier's, petri dishes, and other equipment to build 5 or 6 cloud chambers, but you would need to bring two things: a substantial cooling fan and a computer power supply (or the equivalent) that is >300W. Here's what we found works:
+ 
+http://www.amazon.com/Cooler-Master-Hyper-N520-RR-920-N520-GP/dp/B001NJ0D0Y/ref=sr_1_4?ie=UTF8&qid=undefined&sr=8-4&keywords=CoolerMaster+V8
+ 
+http://www.amazon.com/EVGA-80PLUS-Certified-ATX12V-100-W1-0430-KR/dp/B00H33SDR4/ref=sr_1_1?s=pc&ie=UTF8&qid=undefined&sr=1-1&keywords=400w+power+supply
+ 
+If you bring something along those lines, I'm pretty sure you can go home with your own particle detector! And if you can improve upon the design, that would be amazing. We'll bring a soldering iron and some tools, but feel free to bring your own if you like.
+
+We also have some code that uses your webcam to record images and movies when a cosmic ray passes through the device. It's still beta, so any help in improving it would be greatly appreciated.
+
+Let us know if you're planning on building your own cloud chamber so we can make sure we have enough equipment! Once we get ours up and running, you're also welcome to muck around with ours to see if you can come up with any art/science/whatevs mashups!
+
+--------------------------------------------
+
+Last year's hack with links to directions that we started with: 
+http://sciencehackday.pbworks.com/w/page/68480847/SFideas2013#cloudchamber
+
+Might be interesting to correlate results (e.g. event rate) with this high-energy particle detector Android app: 
+http://www.news.wisc.edu/23166
+
+--------------------------------------------
+
+This repository also contains the code we use to record the cosmic rays, as well as some simpler examples of
+the SimpleCV libraries that we use to drive the webcam.
+
+
