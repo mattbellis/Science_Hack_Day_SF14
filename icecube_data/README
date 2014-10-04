@@ -19,3 +19,13 @@ http://nbviewer.ipython.org/github/mattbellis/Science_Hack_Day_SF14/blob/master/
 
 I've included a small amount (10 neutrino collisions) in this Github repo, but
 if you want more, just let me know!
+
+More information about Icecube's data and it's format can be found here:
+
+http://icecube.umd.edu/PublicData/
+
+http://icecube.umd.edu/PublicData/tutorials/ReadingAllEvents.html
+
+http://icecube.umd.edu/PublicData/tutorials/TheEventViewer.html
+
+http://icecube.umd.edu/PublicData/tutorials/EventTime.html
