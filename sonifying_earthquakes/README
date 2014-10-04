@@ -1,0 +1,18 @@
+################################################################################
+# README
+################################################################################
+
+There are some great visualizations out there of earthquakes: where they happen, when they happen, how powerful they are. But in these static images, I feel we sometimes lose sight of what a dynamic environment the Earth is: creaking and groaning and stretching on a continuous basis. There are earthquakes happening *all the time*, but they might be small or in an unpopulated region (ocean) so we don't hear about them.
+ 
+I found a great site that shows how to query the USGS website and build your own map of where/when earthquakes are occurring.
+ 
+http://flowingdata.com/2014/04/15/mapping-a-century-of-earthquakes/
+ 
+I'd love to play around with this to sonify (turn into sounds) these data. I'd like to ``hear" these earthquakes and get a sense of when they happen over the course of a year. I have some experience doing this with other projects within the processing language, so I think we could get a first-order hack going. But after that, there's probably a lot we could do with it!
+ 
+https://github.com/mattbellis/Science_Hack_Day_SF14/tree/master/sonifying_earthquakes
+ 
+We can also find much more earthquake info here:
+ 
+http://www.iris.edu/hq/
+
