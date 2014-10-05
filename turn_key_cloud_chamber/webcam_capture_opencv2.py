@@ -4,17 +4,25 @@ import cv2
 
 # Use 0 for the onboard webcam.
 # Use 1 for an external webcam.
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
+print cap
 if not cap:
     print "Error loading camera"
     exit(-1)
 
 cap.open(0)
-cv2.namedWindow("mywindow",1)
+print cap
+cv2.namedWindow("mywindow",)
+print cap
 
 while (cap.isOpened()):
 
+    print cap
+
     ret,frame = cap.read()
+
+    print ret
+    print frame
 
     if ret==True:
 
@@ -27,6 +35,4 @@ while (cap.isOpened()):
         break
 
 cap.release()
-cv2.destroyAllWindows()
-
-
+#cv2.destroyAllWindows()
