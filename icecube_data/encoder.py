@@ -61,8 +61,16 @@ def _charstring_to_bitstring(char_string):
     to the correct type.
     """
     bit_str = ""
+    #print("THERE")
+    #print(char_string)
     for ch in char_string :
+        #print(type(ch),ch)
+        #print(ord(ch))
+        # THIS IS THE ORIGINAL
         bit_str += bin( ord(ch) ).lstrip('0b').zfill(8)
+        #
+        #print(ch,str(ch))
+        #bit_str += bin( ord(str(ch)) ).lstrip('0b').zfill(8)
     return bit_str
 
 def _encode_mantissa_as_bitstring(mant):
@@ -74,7 +82,7 @@ def _encode_mantissa_as_bitstring(mant):
     representation of a double precision float.
     """
     mant_bin_rep = [0 for j in range(52)]
-    for n in reversed(range(52)):
+    for n in reversed(list(range(52))):
         f,mant = divmod(mant,2**n)
         mant_bin_rep[n] = int(f)
     mant_bin_rep.reverse()
@@ -92,7 +100,7 @@ def _encode_exponent_as_bitstring(exponent):
     representation of a double precision float.
     """
     exp_bin_rep = [0 for j in range(11)]
-    for n in reversed(range(11)):
+    for n in reversed(list(range(11))):
         f,exponent = divmod(exponent,2**n)
         exp_bin_rep[n] = int(f)
     exp_bin_rep.reverse()
@@ -108,7 +116,7 @@ def encode_unsigned(i):
     """
     if type(i) == type(int()):
         nbytes = 4
-    if type(i) == type(long()):
+    if type(i) == type(int()):
         nbytes = 8 
     return _bitstring_to_charstring( bin(i).lstrip('0b').zfill(nbytes*8) )
 
@@ -116,11 +124,14 @@ def decode_unsigned(char_string):
     """
     The function decodes a string of characters and returns the integer (or long) value.
     """
-    bit_str = _charstring_to_bitstring(char_string)
+    #print("THIS")
+    #print(len(char_string),char_string)#,char_string.decode())
+    bit_str = _charstring_to_bitstring(char_string.decode(encoding='iso-8859-1'))
+    #print("HEREREEERERE: ",bit_str)
     if len(char_string) == 4 :
         return int(bit_str ,2)
     if len(char_string) == 8 :
-        return long(bit_str,2)
+        return int(bit_str,2)
 
 def encode_float(f):
     """
@@ -140,7 +151,7 @@ def encode_float(f):
     f = (-1)**SIGN * (MANTISSA/10**15) * 2**(EXPONENT - 1023 )
     """
     if type(f) != type(float()):
-        print "this is not a float"
+        print("this is not a float")
         sys.exit()
 
     (m,e) = _frexp(fabs(f))
@@ -159,13 +170,13 @@ def decode_float(s):
     layout and interpretation.
     """
     if len(s) != 8 :
-        print "this is not right - len('%s') = %d " % (s,len(s))
+        print("this is not right - len('%s') = %d " % (s,len(s)))
         sys.exit()
     bin_str = _charstring_to_bitstring(s)
     if bin_str[0] == '0' : sign = +1
     if bin_str[0] == '1' : sign = -1
     exponent = int(bin_str[1:12],2) 
-    mantissa = long(bin_str[12:],2) 
+    mantissa = int(bin_str[12:],2) 
     return sign * _ldexp(mantissa,exponent)
     
 

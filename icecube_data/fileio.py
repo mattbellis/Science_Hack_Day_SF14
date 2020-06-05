@@ -27,9 +27,9 @@ def write(file_handle, ev):
     else:
         raise TypeError('year is not an int')
 
-    if type(ev.startTime) == type(long()) or \
+    if type(ev.startTime) == type(int()) or \
            type(ev.startTime) == type(int()) :
-        file_handle.write( encode_unsigned(long(ev.startTime)) )
+        file_handle.write( encode_unsigned(int(ev.startTime)) )
     else:
         raise TypeError('startTime is not a long')
 
@@ -40,14 +40,14 @@ def write(file_handle, ev):
 
     # now for the triggers
     # for decoding we need the number of triggers
-    file_handle.write( encode_unsigned( long(len(ev.triggers))) )
+    file_handle.write( encode_unsigned( int(len(ev.triggers))) )
     for ttime, tname in ev.triggers :
         file_handle.write( encode_float(ttime) )
         file_handle.write( encode_unsigned( int(len(tname)) ) )
         file_handle.write( tname )
         
     # now for the hits
-    file_handle.write( encode_unsigned( long(len(ev.hits))) )
+    file_handle.write( encode_unsigned( int(len(ev.hits))) )
     for q,t,x,y,z in ev.hits :
         file_handle.write( encode_float(q) )
         file_handle.write( encode_float(t) )
@@ -98,6 +98,7 @@ def read(file_handle):
     # return None, otherwise it's safe to decode that as the beginning
     # of the next event.
     data = file_handle.read(INT_SIZE)
+    #print("HERE")
     if data == '' : 
         # EOF, so return None
         return None
@@ -115,6 +116,7 @@ def read(file_handle):
         ttime = decode_float( file_handle.read( FLOAT_SIZE ) )
         tname = ""
         nchar = decode_unsigned( file_handle.read( INT_SIZE ) )
+        #print(nchar,INT_SIZE,FLOAT_SIZE)
         for m in range(nchar) :
             tname += file_handle.read( 1 )
         ev.triggers.append( (ttime,tname) )

@@ -43,7 +43,7 @@ class EventTime:
         @return: This method returns a tuple (datetime, int) where the first element is the datetime 
         object and the second element is the remaining tenths of nanoseconds.
         """
-        microsec = long(self.daqTime * 10**-4)
+        microsec = int(self.daqTime * 10**-4)
         utcTenthNanoSecond = self.daqTime % 10000
         dt = timedelta(microseconds = microsec)
         dateTime = datetime(year = self.year, month = 1, day = 1) + dt
